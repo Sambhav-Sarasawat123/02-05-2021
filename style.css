@@ -1,0 +1,60 @@
+*, *::after, *::before{
+    font-family: 'Gotham Rounded', sans-serif;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #FFE000, #FFFF00);
+}
+.calculator{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+.calculator > button{
+    cursor: pointer;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid white;
+    outline: none;
+}
+.calculator >button:hover{
+    background: rgba(255, 255, 255, 0.9);
+}
+.span-two{
+    grid-column: span 2;
+}
+#output{
+    padding: 10px;
+    grid-column: 1/-1;
+    background: rgba(0, 0, 0, 0.75);
+    border: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-wrap: break-all;
+    text-align: right;
+}
+#prevOperand{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 2rem;
+    margin: 12px;
+    word-wrap: break-word;
+    word-wrap: break-all;
+    max-width: 400px;
+}
+#currentOperand{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 3rem;
+    margin: 0px;
+    word-wrap: break-word;
+    word-wrap: break-all;
+    max-width: 400px;
+}
